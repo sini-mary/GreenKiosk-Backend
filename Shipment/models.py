@@ -1,7 +1,9 @@
 from django.db import models
+from Order.models import Order
 
 # Create your models here.
 class Shipment(models.Model):
+    orderrs = models.ManyToManyField(Order)
     date = models.DateField()
     order = models.TextField()
     location = models.TextField()
