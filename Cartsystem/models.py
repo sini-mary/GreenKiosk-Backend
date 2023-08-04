@@ -1,6 +1,7 @@
 from django.db import models
 from inventory.models import Product
 from  Order.models import Order
+
 # Create your models here.
 class Cart(models.Model):
     products = models.ManyToManyField(Product)

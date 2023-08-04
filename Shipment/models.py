@@ -13,4 +13,4 @@ class Shipment(models.Model):
     delivery_time = models.TimeField()
     
     def __str__(self) :
-        return self.date
+        return self.location
