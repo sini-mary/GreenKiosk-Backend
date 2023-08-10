@@ -11,7 +11,6 @@
 <body>
     <h2>Product Upload Form</h2>
     <form method="POST" class="upload_form" enctype="multipart/form-data">
-        <!-- below is a varaible  (Cross_site request forgery)    it makes sure hacking cannot happen -->
         {% csrf_token %}
         <!-- #render the form -->
         {{form.as_p}}

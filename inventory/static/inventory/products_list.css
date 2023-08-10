@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 600px;
+    line-height: 1.4;
     margin: 0 auto;
     padding: 20px;
     
@@ -17,12 +16,6 @@ th, td {
     padding: 10px;
     border: 1px solid #ddd;
 }
-.heading{
-     background-color: #962525;
-    font-weight: bold;
-}
-
-
 
 
 
@@ -34,7 +27,7 @@ tr:hover {
     background-color: #e0e0e0;
 }
 td{
-    color:#cc00ff;
+    color:black;
 }
 
 a {
@@ -45,4 +38,5 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #141005;
 }

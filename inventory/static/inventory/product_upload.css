@@ -27,11 +27,12 @@ h2 {
 .upload_form input[type="text"],
 .upload_form input[type="file"],
 .upload_form textarea {
-    width: 100%;
+    width: 120%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 20px;
+    
 }
 
 .upload_form textarea {
@@ -39,7 +40,7 @@ h2 {
 }
 
 .upload_form button {
-    background-color: #cc00ff;
+    background-color: #2c5abd;
     color: #fff;
     font-size: 18px;
     padding: 10px 20px;

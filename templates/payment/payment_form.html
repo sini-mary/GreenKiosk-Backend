@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <th>
+            <td>Amount</td>
+            <td>Payment Method</td>
+            <td>Date</td>
+            <td>Receipt</td>
+            <td>Status</td>
+            <td>Order</td>
+        </th>
+        {% for payment in payment %}
+        <td>{{payment.amount}}</td>
+      <td>{{payment.payment_method}}</td>
+     <td> {{payment.date}}</td>  
+       <td>{{payment.receipt}}</td> 
+       <td>{{payment.date}}</td> 
+ {%endfor%}
+
+    </table>
+</body>
+</html>

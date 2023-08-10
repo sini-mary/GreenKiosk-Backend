@@ -11,10 +11,12 @@
     <h2>Add to Cart Page</h2>
     <div class="product-details">
         <img src="product_image.jpg" alt="Product Image">
-        <h3>Product Name</h3>
-        <p>Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p class="product-price">$19.99</p>
+        {%for product.id in products%}
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="product-price">{{product.price}}</p>
         <button class="add-to-cart-button">Add to Cart</button>
+        {%endfor%}
     </div>
     
 </body>

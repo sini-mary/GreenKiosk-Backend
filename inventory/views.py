@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import ProductuploadForm
 from inventory.models import Product
-
+# Accepts a url
 #there are class based views and function based views
 # Create your views here.
 def upload_product(request):                      #the request represents a http request
@@ -14,7 +14,7 @@ def upload_product(request):                      #the request represents a http
         form = ProductuploadForm()
         
     return render(request, "inventory/product_upload.html", {"form": form})
-  
+
   
   #returns many products 
 def products_list(request):
@@ -40,10 +40,20 @@ def cart_upload(request):
   return render(request,"cart/cart_upload.html")
 
 
+def edit_product(request, id):
+    product = Product.objects.get(id=id)
 
+    if request.method == 'POST':
+        form = ProductuploadForm(request.POST, instance=product)
 
+        if form.is_valid():
+            form.save()
+            return redirect('product_detail_view', id=id)  # Corrected redirect line
 
-
+    else:
+        form = ProductuploadForm(instance=product)
+    
+    return render(request, 'inventory/edit_product.html', {'form': form})
 
 
 
