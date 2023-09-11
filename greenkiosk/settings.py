@@ -48,7 +48,19 @@ INSTALLED_APPS = [
     'Payment',
     'Notification',
     'Order',
+    'rest_framework',
+    
+    
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,7 +78,7 @@ ROOT_URLCONF = 'greenkiosk.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],          #help to discover templates
+        'DIRS': [os.path.join(BASE_DIR,"templates")],         
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

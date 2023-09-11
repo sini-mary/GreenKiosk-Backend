@@ -36,3 +36,4 @@ def edit_customer(request,id):
 def  customer_detail(request,id):
   customer = Customer.objects.get(id =id)
   return render(request,'Customer/customer_detail.html',{"customer":customer})
+ 
